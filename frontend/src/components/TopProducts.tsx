@@ -28,19 +28,25 @@ const products = [
 
 export default function TopProducts() {
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
-      <h2 className="text-lg font-semibold text-gray-900">
-        Top Products
-      </h2>
+    <div className="rounded-xl border border-border bg-surface p-6 shadow-sm">
 
-      <p className="mt-1 text-sm text-gray-500">
-        Best-selling products
-      </p>
+      {/* Header */}
+      <div>
+        <h2 className="text-lg font-semibold text-carbon-slate">
+          Top Products
+        </h2>
 
+        <p className="mt-1 text-sm text-muted">
+          Best-selling products
+        </p>
+      </div>
+
+      {/* Table */}
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-left">
+
           <thead>
-            <tr className="border-b text-sm text-gray-500">
+            <tr className="border-b border-border text-sm text-muted">
               <th className="pb-3">Product</th>
               <th className="pb-3">Category</th>
               <th className="pb-3 text-right">Units Sold</th>
@@ -51,22 +57,23 @@ export default function TopProducts() {
             {products.map((product) => (
               <tr
                 key={product.name}
-                className="border-b last:border-0"
+                className="border-b border-border last:border-0"
               >
-                <td className="py-4 font-medium text-gray-900">
+                <td className="py-4 font-medium text-carbon-slate">
                   {product.name}
                 </td>
 
-                <td className="py-4 text-gray-500">
+                <td className="py-4 text-muted">
                   {product.category}
                 </td>
 
-                <td className="py-4 text-right font-medium">
+                <td className="py-4 text-right font-medium text-carbon-slate">
                   {product.unitsSold}
                 </td>
               </tr>
             ))}
           </tbody>
+
         </table>
       </div>
     </div>

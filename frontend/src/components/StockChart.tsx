@@ -20,33 +20,74 @@ const data = [
 
 export default function StockChart() {
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
-      <h2 className="text-lg font-semibold text-gray-900">
-        Stock by Category
-      </h2>
+    <div className="rounded-xl border border-border bg-surface p-6 shadow-sm">
 
-      <p className="mt-1 text-sm text-gray-500">
-        Current stock levels
-      </p>
+      {/* Header */}
+      <div>
+        <h2 className="text-lg font-semibold text-carbon-slate">
+          Stock by Category
+        </h2>
 
+        <p className="mt-1 text-sm text-muted">
+          Current stock levels
+        </p>
+      </div>
+
+      {/* Chart */}
       <div className="mt-6 h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
+          <BarChart
+            data={data}
+            margin={{
+              top: 10,
+              right: 10,
+              left: 0,
+              bottom: 0,
+            }}
+          >
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="var(--border)"
+            />
 
-            <XAxis dataKey="category" />
+            <XAxis
+              dataKey="category"
+              tick={{
+                fill: "var(--muted)",
+                fontSize: 12,
+              }}
+              axisLine={false}
+              tickLine={false}
+            />
 
-            <YAxis />
+            <YAxis
+              tick={{
+                fill: "var(--muted)",
+                fontSize: 12,
+              }}
+              axisLine={false}
+              tickLine={false}
+            />
 
-            <Tooltip />
-
+            <Tooltip
+              formatter={(value) => [value, "Stock"]}
+              contentStyle={{
+                borderRadius: "8px",
+                border: "1px solid var(--border)",
+                backgroundColor: "var(--surface)",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
+              }}
+            />
             <Bar
               dataKey="stock"
-              fill="#000000"
+              fill="var(--slate-teal)"
+              radius={[6, 6, 0, 0]}
+              barSize={40}
             />
           </BarChart>
         </ResponsiveContainer>
       </div>
+
     </div>
   );
 }

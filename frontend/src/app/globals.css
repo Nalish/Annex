@@ -1,22 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ================================
+     Annex Color Palette
+     ================================ */
+
+  /* Main colors */
+  --electric-indigo: #6366f1;
+  --slate-teal: #0f766e;
+  --carbon-slate: #1e293b;
+  --frost-gray: #f1f5f9;
+  --amber-glow: #f59e0b;
+
+  /* ================================
+     Application Colors
+     ================================ */
+
+  --background: var(--frost-gray);
+  --foreground: var(--carbon-slate);
+
+  --primary: var(--electric-indigo);
+  --primary-dark: #4f46e5;
+
+  --secondary: var(--slate-teal);
+
+  --surface: #ffffff;
+
+  --muted: #64748b;
+
+  --border: #e2e8f0;
+
+  --success: var(--slate-teal);
+  --warning: var(--amber-glow);
+  --danger: #dc2626;
 }
 
 @theme inline {
+  /* ================================
+     Background & Text
+     ================================ */
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* ================================
+     Annex Brand Colors
+     ================================ */
+
+  --color-electric-indigo: var(--electric-indigo);
+  --color-slate-teal: var(--slate-teal);
+  --color-carbon-slate: var(--carbon-slate);
+  --color-frost-gray: var(--frost-gray);
+  --color-amber-glow: var(--amber-glow);
+
+  /* ================================
+     Application Colors
+     ================================ */
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+
+  --color-secondary: var(--secondary);
+
+  --color-surface: var(--surface);
+
+  --color-muted: var(--muted);
+
+  --color-border: var(--border);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  /* ================================
+     Fonts
+     ================================ */
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
