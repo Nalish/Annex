@@ -6,18 +6,18 @@ import TopProducts from "@/components/TopProducts";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background p-4 md:p-6 lg:p-8">
+    <main className="min-h-screen bg-carbon-slate p-4 md:p-6 lg:p-8 ">
 
       {/* ================================
           Page Header
           ================================ */}
       <div className="mb-8 flex flex-col gap-2">
         <div>
-          <h1 className="text-2xl font-bold text-carbon-slate md:text-3xl lg:text-4xl">
+          <h1 className="text-2xl text-white font-bold text-carbon-slate md:text-3xl lg:text-4xl">
             Dashboard
           </h1>
 
-          <p className="mt-1 text-sm text-muted md:text-base">
+          <p className="mt-1 text-sm text-muted md:text-base text-white">
             Overview of your business performance
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function Home() {
           ================================ */}
       <section>
         <div className="mb-4">
-          <h2 className="text-lg font-semibold text-carbon-slate">
+          <h2 className="text-lg font-semibold text-carbon-slate text-white">
             Business Overview
           </h2>
 
@@ -98,7 +98,7 @@ export default function Home() {
       <section className="mt-8">
 
         <div className="mb-4">
-          <h2 className="text-lg font-semibold text-carbon-slate">
+          <h2 className="text-lg font-semibold  text-white">
             Top Products
           </h2>
 

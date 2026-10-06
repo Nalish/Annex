@@ -16,8 +16,8 @@
      Application Colors
      ================================ */
 
-  --background: var(--frost-gray);
-  --foreground: var(--carbon-slate);
+  --background: var(--carbon-slate);
+  --foreground: var(--frost-gray);
 
   --primary: var(--electric-indigo);
   --primary-dark: #4f46e5;
