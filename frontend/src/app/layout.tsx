@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex ">
         <Sidebar />
-        <main className="flex-1">{children}</main>
+        <main className="ml-64 flex-1">{children}</main>
        </body>
     </html>
   );

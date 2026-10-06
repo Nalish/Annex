@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 export default function Sidebar() {
   const pathname = usePathname()
   return (
-    <aside className="min-h-screen w-64 border-r border-border bg-carbon-slate p-6">
+    <aside className="fixed left-0 top-0 h-screen w-64 border-r border-border bg-carbon-slate p-6">
 
       {/* Logo */}
-      <div className="mb-10">
+      <div className="mb-10 ">
         <h1 className="text-2xl font-bold text-white">
           Annex
         </h1>
